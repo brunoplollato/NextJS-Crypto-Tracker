@@ -1,8 +1,12 @@
+import Head from 'next/head';
 import styles from './styles.module.scss';
 
 export default function Coin({ coin }) {
   return (
     <div className={styles.coinPage}>
+      <Head>
+        <title>{coin.name} | Bitstamp</title>
+      </Head>
       <div className={styles.container}>
         <img 
           src={coin.image.large} 

@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React, { useState } from 'react';
 
 import { CoinList } from '../components/CoinList';
@@ -17,11 +18,16 @@ export default function Home({ filteredCoins }) {
   }
 
   return (
-    <div>
-      <SearchBar type="text" placeholder="Search" onChange={handleChange} />
-      
-      <CoinList filteredCoins={allCoins} />
-    </div>
+    <>
+      <Head>
+        <title>Bitstamp</title>
+      </Head>
+      <div>
+        <SearchBar type="text" placeholder="Search" onChange={handleChange} />
+        
+        <CoinList filteredCoins={allCoins} />
+      </div>
+    </>
   )
 }
 

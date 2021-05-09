@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 import styles from './styles.module.scss';
 
@@ -9,7 +10,7 @@ export function Coins({ id, name, price, symbol, marketCap, volume, image, price
         <div className={styles.container}>
           <div className={styles.row}>
             <div className={styles.coin}>
-              <img src={image} alt={name} className={styles.coinImg} />
+              <Image src={image} alt={name} className={styles.coinImg} objectFit="contain" width={90} height={90} />
               <h1>{name}</h1>
               <p className={styles.coinSymbol}>{symbol}</p>
             </div>
